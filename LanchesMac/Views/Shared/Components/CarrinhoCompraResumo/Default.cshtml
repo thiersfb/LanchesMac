@@ -1,0 +1,11 @@
+﻿@model CarrinhoCompraViewModel
+
+@if(Model.CarrinhoCompra.CarrinhoCompraItems.Count > 0)
+{
+    <a asp-controller="CarrinhoCompra" asp-action="Index">
+        <ul class="nav navbar-nav navbar-left">
+            <span class="nav-link text-light"><img src="~/images/cart.png" style="width: 18px; height: 18px" /></span>
+            <span class="nav-link text-light" style="color:white"> @Model.CarrinhoCompra.CarrinhoCompraItems.Count </span>
+        </ul>
+    </a>
+}
